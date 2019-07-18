@@ -8,8 +8,8 @@
     <ProjectGuid>{964B74FF-A718-46E3-AC01-8F2062B2C0C5}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>TripServicesNSwagTests</RootNamespace>
-    <AssemblyName>TripServicesNSwagTests</AssemblyName>
+    <RootNamespace>TripServices</RootNamespace>
+    <AssemblyName>TripServicesNSwag</AssemblyName>
     <TargetFrameworkVersion>v4.6.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>

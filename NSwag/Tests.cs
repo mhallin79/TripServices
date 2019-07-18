@@ -6,12 +6,11 @@ using System.Text;
 using System.Threading.Tasks;
 using NUnit.Framework;
 
-namespace TripServicesNSwagTests
+namespace TripServices.NSwag
 {
     [TestFixture]
     public class Tests
     {
-
         [Test]
         public static void TestUsingCatalogOfferingsRequestAirExtended()
         {
