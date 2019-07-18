@@ -1,0 +1,32 @@
+{
+  "CatalogOfferingsQueryRequest": {
+    "CatalogOfferingsRequest": [
+      {
+        "@type": "CatalogOfferingsRequestAir",
+        "maxNumberOfOffersToReturn": 50,
+        "contentSourceList": [
+          "NDC"
+        ],
+        "returnBrandedFaresInd": true,
+        "PassengerCriteria": [
+          {
+            "value": "ADT",
+            "number": 1
+          }
+        ],
+        "SearchCriteriaFlight": [
+          {
+            "@type": "SearchCriteriaFlight",
+            "departureDate": "2019-07-16",
+            "From": {
+              "value": "SYD"
+            },
+            "To": {
+              "value": "MEL"
+            }
+          }
+        ]
+      }
+    ]
+  }
+}
