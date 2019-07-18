@@ -79,7 +79,7 @@ namespace TripServices.NSwag
         {
             get
             {
-                var path = Directory.GetParent(AppDomain.CurrentDomain.BaseDirectory).Parent.FullName + "\\AirSearchRequestExample.json";
+                var path = Directory.GetParent(AppDomain.CurrentDomain.BaseDirectory).Parent.Parent.FullName + "\\AirSearchRequestExample.json";
                 var stream = File.OpenText(path);
 
                 var s = stream.ReadToEnd();
@@ -89,5 +89,4 @@ namespace TripServices.NSwag
             }
         }
     }
-
 }

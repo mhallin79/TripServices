@@ -4,7 +4,7 @@
 // </auto-generated>
 //----------------------
 
-namespace TripServices
+namespace TripServices.NSwag
 {
     #pragma warning disable
 
