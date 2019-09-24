@@ -1,0 +1,43 @@
+{
+  "OfferQueryBuildFromProducts": {
+    "returnBrandedFaresInd": true,
+    "BuildFromProductsRequest": {
+      "@type": "BuildFromProductsRequestAir",
+      "PricingModifiersAir": {
+        "@type": "PricingModifiersAirDetail",
+        "currencyCode": "USD",
+        "FareSelection": {
+          "@type": "FareSelectionDetail",
+          "fareType": "PublicAndPrivateFares"
+        },
+        "Brand": { "@type": "BrandSummary" }
+      },
+      "PassengerCriteria": [
+        {
+          "number": 1,
+          "age": 25,
+          "value": "ADT"
+        }
+      ],
+      "ProductCriteriaAir": [
+        {
+          "SpecificFlightCriteria": [
+            {
+              "flightNumber": "2",
+              "carrier": "QF",
+              "departureDate": "2019-10-23",
+              "departureTime": "19:30:00",
+              "arrivalDate": "2019-10-24",
+              "arrivalTime": "06:10:00",
+              "from": "SIN",
+              "to": "SYD",
+              "classOfService": "S",
+              "cabin": "Economy",
+              "segmentSequence": 1
+            }
+          ]
+        }
+      ]
+    }
+  }
+}
