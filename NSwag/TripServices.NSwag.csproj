@@ -60,16 +60,35 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CatalogOfferingsResource_4_0_0.defs.swagger.cs" />
+    <Compile Include="Schemas\OfferResource_catalog_4_0_0.defs.swagger.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>OfferResource_catalog_4_0_0.defs.swagger.json</DependentUpon>
+    </Compile>
+    <Compile Include="Schemas\OfferResource_workbench_4_0_0.defs.swagger.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>OfferResource_workbench_4_0_0.defs.swagger.json</DependentUpon>
+    </Compile>
     <Compile Include="Tests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="CatalogOfferingsResource_4_0_0.defs.swagger.json">
-      <Generator>NSwagCodeGenerator</Generator>
-    </None>
     <None Include="packages.config" />
+    <None Include="Schemas\OfferResource_catalog_4_0_0.defs.swagger.json">
+      <Generator>NSwagCodeGenerator</Generator>
+      <LastGenOutput>OfferResource_catalog_4_0_0.defs.swagger.cs</LastGenOutput>
+    </None>
+    <None Include="Schemas\OfferResource_workbench_4_0_0.defs.swagger.json">
+      <Generator>NSwagCodeGenerator</Generator>
+      <LastGenOutput>OfferResource_workbench_4_0_0.defs.swagger.cs</LastGenOutput>
+    </None>
+    <None Include="Schemas\ReservationCommentResource_4_0_0.defs.swagger" />
+    <None Include="Schemas\ReservationResource_workbench_4_0_0.defs.swagger" />
+    <None Include="Schemas\TravelerResource_reservation_4_0_0.defs.swagger" />
+    <None Include="Schemas\TravelerResource_workbench_4_0_0.defs.swagger" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>
