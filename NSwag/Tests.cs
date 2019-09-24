@@ -4,6 +4,7 @@ using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Newtonsoft.Json;
 using NUnit.Framework;
 
 namespace TripServices.NSwag
@@ -11,33 +12,43 @@ namespace TripServices.NSwag
     [TestFixture]
     public class Tests
     {
+
         [Test]
         public static void TestUsingCatalogOfferingsRequestAirExtended()
         {
-            var req = new CatalogOfferingsQueryRequest
+            var jsonSerializerSettings = new JsonSerializerSettings()
             {
-                CatalogOfferingsRequest = new[] { CatalogOfferingsRequestAir() }
+                Formatting = Formatting.Indented
             };
 
-            Assert(req.ToJson());
-        }
-
-        [Test]
-        public static void TestUsingExtensionPoint_Shared()
-        {
-            var req = new CatalogOfferingsQueryRequest
+            var rootWrapper = new
             {
-                CatalogOfferingsRequest = new List<CatalogOfferingsRequest>
+                CatalogOfferingsQueryRequest = new CatalogOfferingsQueryRequest
                 {
-                    new CatalogOfferingsRequest
-                    {
-                        ExtensionPoint_Shared = CatalogOfferingsRequestAir()
-                    }
+                    CatalogOfferingsRequest = new[] { CatalogOfferingsRequestAir() }
                 }
+
             };
 
-            Assert(req.ToJson());
+            Assert(JsonConvert.SerializeObject(rootWrapper, jsonSerializerSettings));
         }
+
+        //[Test]
+        //public static void TestUsingExtensionPoint_Shared()
+        //{
+        //    var req = new CatalogOfferingsQueryRequest
+        //    {
+        //        CatalogOfferingsRequest = new List<CatalogOfferingsRequest>
+        //        {
+        //            new CatalogOfferingsRequest
+        //            {
+        //                ExtensionPoint_Shared = CatalogOfferingsRequestAir()
+        //            }
+        //        }
+        //    };
+
+        //    Assert(req.ToJson());
+        //}
 
 
         private static CatalogOfferingsRequestAir CatalogOfferingsRequestAir()
@@ -79,7 +90,7 @@ namespace TripServices.NSwag
         {
             get
             {
-                var path = Directory.GetParent(AppDomain.CurrentDomain.BaseDirectory).Parent.Parent.FullName + "\\AirSearchRequestExample.json";
+                var path = Directory.GetParent(AppDomain.CurrentDomain.BaseDirectory).Parent.Parent.Parent.FullName + "\\AirSearchRequestExample.json";
                 var stream = File.OpenText(path);
 
                 var s = stream.ReadToEnd();
