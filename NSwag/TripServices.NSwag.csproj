@@ -75,6 +75,7 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
+    <None Include="Schemas\FormOfPaymentResource_workbench_4_0_0.defs.swagger" />
     <None Include="Schemas\OfferResource_catalog_4_0_0.defs.swagger.json">
       <Generator>NSwagCodeGenerator</Generator>
       <LastGenOutput>OfferResource_catalog_4_0_0.defs.swagger.cs</LastGenOutput>
@@ -83,8 +84,12 @@
       <Generator>NSwagCodeGenerator</Generator>
       <LastGenOutput>OfferResource_workbench_4_0_0.defs.swagger.cs</LastGenOutput>
     </None>
+    <None Include="Schemas\PaymentResource_4_0_0.defs.swagger" />
+    <None Include="Schemas\ReceiptResource_4_0_0.defs.swagger" />
     <None Include="Schemas\ReservationCommentResource_4_0_0.defs.swagger" />
+    <None Include="Schemas\ReservationResource_reservation_4_0_0.defs.swagger" />
     <None Include="Schemas\ReservationResource_workbench_4_0_0.defs.swagger" />
+    <None Include="Schemas\TicketResource_4_0_0.defs.swagger" />
     <None Include="Schemas\TravelerResource_reservation_4_0_0.defs.swagger" />
     <None Include="Schemas\TravelerResource_workbench_4_0_0.defs.swagger" />
   </ItemGroup>
